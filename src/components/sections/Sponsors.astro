@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import s1 from "../../assets/pics/company-logo1.svg";
-import s2 from "../../assets/pics/company-logo2.svg";
-import s3 from "../../assets/pics/company-logo3.svg";
-import s4 from "../../assets/pics/company-logo4.svg";
-import s5 from "../../assets/pics/company-logo5.svg";
-import s6 from "../../assets/pics/company-logo6.svg";
+import s1 from "../../assets/pics/1.png";
+import s2 from "../../assets/pics/2.png";
+import s3 from "../../assets/pics/3.png";
+import s4 from "../../assets/pics/4.png";
+import s5 from "../../assets/pics/5.png";
 import Section from "./Section.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
 
 const sponsors = [
   { logo: s1, alt: "Amazon logo" },
@@ -14,11 +14,14 @@ const sponsors = [
   { logo: s3, alt: "HubSpot logo" },
   { logo: s4, alt: "Notion logo" },
   { logo: s5, alt: "Netflix logo" },
-  { logo: s6, alt: "Zoom logo" },
 ];
+
+const description =
+  "Few of our proud partners and customers";
 ---
 
 <Section id="sponsors">
+ <SectionTitle sectionTitle="Partners" description={description} />
   <div class="flex flex-wrap justify-between gap-7 mt-[60px]">
     {
       sponsors.map((sponsor) => {
